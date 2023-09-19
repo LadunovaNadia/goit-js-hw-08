@@ -25,10 +25,7 @@ galleryList.addEventListener('click', (event) => {
    if (event.target.tagName === 'IMG') {
       const largeImageUrl = event.target.dataset.source;
 
-const imageElement = document.createElement('img');
-imageElement.src = largeImageUrl;
-imageElement.alt = event.target.alt;
-
-const lightbox = new SimpleLightbox(imageElement);
+      const lightbox = new SimpleLightbox(largeImageUrl);
+      lightbox.show();
    }
 });
